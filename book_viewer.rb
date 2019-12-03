@@ -6,7 +6,7 @@ before do
   @contents = File.readlines("data/toc.txt")
 end
 
-not_found do # adding some code in 
+not_found do # adding some code in
   redirect "/"
 end
 
@@ -56,4 +56,8 @@ end
 get "/search" do
   @results = chapters_matching(params[:query])
   erb :search
+end
+
+get "/alfred" do
+  "Hello World"
 end
